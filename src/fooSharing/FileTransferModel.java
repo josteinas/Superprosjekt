@@ -9,7 +9,9 @@ public class FileTransferModel {
 	}
 	
 	
-	
+	public boolean acceptFile(TransferRequest request) {
+		return true;
+	}
 	
 	
 	 public void sendFile(File file, Computer computer){

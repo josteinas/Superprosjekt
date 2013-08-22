@@ -45,7 +45,7 @@ public class FileTransferWindow extends JPanel {
 		int i = 0;
 		
 
-		setBackground(Color.ORANGE);
+		//setBackground(Color.ORANGE);
 		setLayout(new GridBagLayout());
 		
 		collection = new ArrayList<Computer>();
