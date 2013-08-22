@@ -2,11 +2,11 @@ package transfer;
 
 import java.net.Socket;
 
-public class ReqestPasrser implements Runnable{
+public class RequestParser implements Runnable{
 
 	Socket socket; 
 	
-	public ReqestPasrser(Socket socket){
+	public RequestParser(Socket socket){
 		this.socket = socket; 
 	}
 	

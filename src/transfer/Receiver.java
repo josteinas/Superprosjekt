@@ -14,7 +14,7 @@ public class Receiver {
 			
 			while(true){
 				Socket receiveSocket = serverSocket.accept(); 
-				ReqestPasrser fileReceiver = new ReqestPasrser(receiveSocket); 
+				RequestParser fileReceiver = new RequestParser(receiveSocket); 
 				(new Thread(fileReceiver)).start();
 			}
 			
