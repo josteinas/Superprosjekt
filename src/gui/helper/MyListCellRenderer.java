@@ -1,4 +1,4 @@
-package fooSharing;
+package gui.helper;
 
 import java.awt.Component;
 import javax.swing.ImageIcon;

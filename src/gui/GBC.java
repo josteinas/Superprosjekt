@@ -94,4 +94,8 @@ public class GBC extends GridBagConstraints {
 		this.ipady = ipady;
 		return this;
 	}
+	public GBC setHeight(int i) {
+		this.gridheight = i;
+		return this;
+	}
 }
