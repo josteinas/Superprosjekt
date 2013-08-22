@@ -20,7 +20,7 @@ public class Receiver {
 			}
 			
 		} catch (IOException e) {
-			System.out.println("heihei");
+			System.out.println("heihi");
 		} 
 	}
 	
