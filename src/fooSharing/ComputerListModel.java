@@ -1,6 +1,5 @@
 package fooSharing;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -9,41 +8,30 @@ import javax.swing.ListModel;
 import javax.swing.event.ListDataListener;
 
 
-public class ComputerListModel extends DefaultListModel implements ListModel {
+public class ComputerListModel extends DefaultListModel {
 	
-	ArrayList<Computer> collection = new ArrayList<Computer>();
+	ArrayList<Computer> computers = new ArrayList<Computer>();
 	
 	public ComputerListModel(){
 		
 	}
 
-	public ComputerListModel(Collection<Computer> collection) {
-		this.collection = (ArrayList<Computer>) collection;
+	public ComputerListModel(Collection<Computer> computers) {
+		this.computers = (ArrayList<Computer>) computers;
 	}
 
 	public Object getElementAt(int index) {
-		return (collection.get(index));
+		return (computers.get(index));
 	}
 
 	public int getSize() {
-		return (collection.size());
+		return (computers.size());
+	}
+	
+	public void updateComputers(ArrayList<Computer> computers) {
+		this.computers.removeAll(computers);
+		this.computers.addAll(computers);
 	}
 
-	@Override
-	public void addListDataListener(ListDataListener arg0) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void removeListDataListener(ListDataListener arg0) {
-		// TODO Auto-generated method stub
-
-	}
-
-	 public void sendFile(File file, String computerName){
-	 System.out.println(file.getAbsolutePath());
-	 System.out.println(computerName);
-	 }
 
 }
