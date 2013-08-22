@@ -15,10 +15,12 @@ public class Receiver {
 			while(true){
 				Socket receiveSocket = serverSocket.accept(); 
 				FileReceiver fileReceiver = new FileReceiver(receiveSocket); 
+				(new Thread(fileReceiver)).start();
 				fileReceiver.run(); 
 			}
 			
 		} catch (IOException e) {
+			System.out.println("heihi");
 		} 
 	}
 	
