@@ -11,9 +11,9 @@ public class FileReceiver implements Runnable{
 	Socket socket; 
 	File file; 
 
-	public FileReceiver(Socket socket){
+	public FileReceiver(Socket socket, File file){
 		this.socket = socket;
-		file = new File("C:\\Users\\torst_000\\Downloads\\ReceivedFile.mp4"); 
+		this.file = file;  
 	}
 	
 	public void run() {
