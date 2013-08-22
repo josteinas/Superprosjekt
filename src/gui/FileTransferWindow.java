@@ -41,7 +41,8 @@ public class FileTransferWindow extends JPanel {
 	
 	public FileTransferWindow() {
 		
-		model = new FileTransferModel();
+		model = new FileTransferModel(this);
+		
 		int i = 0;
 		
 
