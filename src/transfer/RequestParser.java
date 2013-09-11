@@ -12,7 +12,7 @@ public class RequestParser implements Runnable{
 	
 	public void run() {
 		// TODO Auto-generated method stub
-		
+		RequestHandler.addSocket(socket);
 	}
 
 }
