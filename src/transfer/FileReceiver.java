@@ -1,9 +1,12 @@
 package transfer;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
 import java.net.Socket;
 
 public class FileReceiver implements Runnable{
@@ -20,6 +23,12 @@ public class FileReceiver implements Runnable{
 		long start = System.currentTimeMillis(); 
 		FileOutputStream fileOutputStream = null;
 		try {
+			//Read the incoming Json
+			InputStreamReader ir = new InputStreamReader(socket.getInputStream());
+			BufferedReader br = new BufferedReader(ir);
+			System.out.println(br.readLine());
+			//TODO block for accept and send a signal to start transfer
+			//Read the file from the stream
 			InputStream inputStream = socket.getInputStream();
 			fileOutputStream = new FileOutputStream(file);
 			byte[] byteArray = new byte[1024*1024];

@@ -9,6 +9,11 @@ import java.util.concurrent.TimeUnit;
 public class RequestHandler implements Runnable{
 	
 	private static BlockingQueue<Socket> blockingQueue; 
+	private State state;
+	
+	private enum State{
+		UNDEFINED, WAITING_FOR_MESSAGE, TRANSFER;
+	}
 	
 	public RequestHandler(BlockingQueue<Socket> blockingQueue){
 		this.blockingQueue = blockingQueue;
@@ -25,6 +30,7 @@ public class RequestHandler implements Runnable{
 			}
 		}
 	}
+	
 	
 
 	
