@@ -1,5 +1,6 @@
 package transfer;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -14,12 +15,12 @@ public class Receiver {
 			
 			while(true){
 				Socket receiveSocket = serverSocket.accept(); 
-				RequestParser fileReceiver = new RequestParser(receiveSocket); 
-				(new Thread(fileReceiver)).start();
+				RequestParser requestParser = new RequestParser(receiveSocket); 
+				(new Thread(requestParser)).start();
 			}
 			
 		} catch (IOException e) {
-			System.out.println("heihi");
+			System.out.println("IOException i Receiver");
 		} 
 	}
 	
