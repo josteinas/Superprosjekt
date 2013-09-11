@@ -9,14 +9,13 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import com.google.gson.JsonObject;
 
 import fooSharing.Computer;
 
 public class Sender {
 	static int port = 10000;
 	static String address = "169.254.148.182";
-	static String filePath = "C:\\Users\\user\\Downloads\\tv\\Safety Not Guaranteed (2012) [1080p]\\Safety.Not.Guaranteed.2012.1080p.BRrip.x264.YIFY.mp4";
+	static String filePath = "C:\\Users\\user\\test.txt";
 
 	private static void sendFile(Socket socket, File file) throws IOException {
 		FileInputStream fStream = new FileInputStream(file);
