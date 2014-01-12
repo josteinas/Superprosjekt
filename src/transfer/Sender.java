@@ -14,7 +14,7 @@ import fooSharing.Computer;
 
 public class Sender {
 	static int port = 10000;
-	static String address = "169.254.148.182";
+	static String address = "127.0.0.1";
 	static String filePath = "C:\\Users\\user\\test.txt";
 
 	private static void sendFile(Socket socket, File file) throws IOException {
